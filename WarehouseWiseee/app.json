@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "WarehouseWiseee",
+    "slug": "WarehouseWiseee",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "WarehouseWiseee"
+}
