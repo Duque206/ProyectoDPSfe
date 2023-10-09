@@ -1,4 +1,4 @@
-package com.warehousewiseee;
+package com.duki123.WarehouseWiseee;
 
 import android.app.Application;
 import android.content.res.Configuration;
