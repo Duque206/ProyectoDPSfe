@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "WarehouseWiseee",
+    "slug": "WarehouseWiseee",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.duki123.WarehouseWiseee"
+    }
+  },
+  "name": "WarehouseWiseee"
+}
