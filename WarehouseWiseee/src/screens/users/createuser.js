@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, ScrollView, Image } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
-const CrearUsuarioScreen = () => {
+const CrearUsuario = ({navigation}) => {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [rol, setRol] = useState('usuario');
@@ -14,11 +14,7 @@ const CrearUsuarioScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
 
-      <Image
-        source={require('./w.png')} 
-        style={styles.banner}
-      />
-
+     
       <Text style={styles.title}>Crear Usuario</Text>
 
       <View style={styles.inputContainer}>
@@ -71,8 +67,7 @@ const CrearUsuarioScreen = () => {
        <View style={styles.roundedButton}>
         <Button
           title="Regresar"
-          onPress={() => {
-          }}
+          onPress={()=> navigation.navigate('login')}
           color="#666666"
         /> 
       </View>
@@ -88,6 +83,7 @@ const CrearUsuarioScreen = () => {
     </ScrollView>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
@@ -146,4 +142,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CrearUsuarioScreen;
+export default CrearUsuario;

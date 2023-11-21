@@ -1,8 +1,10 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-
-function LoginScreen() {
+  
+const LoginScreen = ({navigation}) => {
+ 
   return (
+
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
       <TextInput
@@ -16,10 +18,10 @@ function LoginScreen() {
         secureTextEntry={true}
         placeholderTextColor="gray" 
       />
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity style={styles.loginButton} onPress={()=> navigation.navigate('homepage')}>
         <Text style={styles.loginButtonText}>Ingresar</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.registerButton}>
+      <TouchableOpacity style={styles.registerButton} onPress={()=> navigation.navigate('createuser')}>
         <Text style={styles.registerButtonText}>Registrarse</Text>
       </TouchableOpacity>
     </View>
@@ -74,5 +76,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
 
 export default LoginScreen;

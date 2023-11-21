@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "WarehouseWiseee",
-    "slug": "WarehouseWiseee",
+    "name": "Almacen",
+    "slug": "Almacen",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "WarehouseWiseee"
+  "name": "Almacen"
 }

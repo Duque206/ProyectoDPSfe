@@ -1,14 +1,11 @@
 {
   "expo": {
-    "name": "WarehouseWiseee",
-    "slug": "WarehouseWiseee",
+    "name": "Almacen",
+    "slug": "Almacen",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "android": {
-      "package": "com.duki123.WarehouseWiseee"
-    }
+    ]
   },
-  "name": "WarehouseWiseee"
+  "name": "Almacen"
 }

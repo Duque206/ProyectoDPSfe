@@ -4,10 +4,10 @@ import { Table, Row, Rows } from 'react-native-table-component';
 import SampleSearchComponent from './paginas/buscar';
 
 import Logo from './imagenes/w.png';
-import { Button } from 'react-native-elements';
 
 
-export default function App() {
+
+const ListaProducto = ({navigation}) =>  {
   const [selectedOption, setSelectedOption] = useState('Opción 1'); 
   const tableData = [
     ['Nombre', 'Unidades ', 'Precio'],
@@ -24,22 +24,23 @@ export default function App() {
         
 
         <View style={styles.buttonGroup}>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Panel</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Pedidos</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Usuarios</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Deposito</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('categoriedetail')}>
             <Text style={styles.buttonText}>Categorias</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('categorieslist')}>
+            <Text style={styles.buttonText}>Lista de categorias</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('createproduct')}>
+            <Text style={styles.buttonText}>Productos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('detailproduct')}>
+            <Text style={styles.buttonText}>Detalle de Productos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('productlist')}>
+            <Text style={styles.buttonText}>Lista de Productos</Text>
+          </TouchableOpacity>
         </View>
+        
         <Picker
           selectedValue={selectedOption}
           style={styles.picker}
@@ -98,6 +99,7 @@ export default function App() {
     </View>
   );
 }
+export default ListaProducto;
 
 const styles = StyleSheet.create({
   container: { flex: 1 },

@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.warehousewiseee"
+    namespace "com.almacen"
     defaultConfig {
-        applicationId "com.warehousewiseee"
+        applicationId "com.almacen"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

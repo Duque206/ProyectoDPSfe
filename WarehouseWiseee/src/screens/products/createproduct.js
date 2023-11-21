@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'; 
+import { View, Text, TextInput, Button, Image, StyleSheet, ScrollView } from 'react-native'; 
 import { Picker } from '@react-native-picker/picker';
 
-const CrearProducto = () => {
+const CrearProducto = ({navigation}) => {
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [precio, setPrecio] = useState('');
@@ -12,7 +12,7 @@ const CrearProducto = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Image
-        source={require('./w.png')} 
+        source={require('./imagenes/w.png')} 
         style={styles.banner}
       />
 
@@ -75,7 +75,7 @@ const CrearProducto = () => {
 
       <View style={styles.buttonContainer}>
        <View style={styles.roundedButton}>
-         <Button title="Regresar" onPress={() => {}} 
+         <Button title="Regresar" onPress={() => navigation.navigate('homepage')} 
          color="#666666"/>
         </View>
         <View style={styles.roundedButton}>
